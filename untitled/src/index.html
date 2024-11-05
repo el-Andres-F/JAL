@@ -1,0 +1,33 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simón Dice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Simón Dice</h1>
+        <div id="modes">
+            <button onclick="startGame('clasico')">Modo Clásico</button>
+            <button onclick="startGame('desafio')">Modo Desafío</button>
+        </div>
+        <div id="game" class="hidden">
+            <div id="level"></div>
+            <div id="colors">
+                <div class="color dark-red" onclick="userClick(1)"></div>
+                <div class="color dark-green" onclick="userClick(2)"></div>
+                <div class="color dark-blue" onclick="userClick(3)"></div>
+                <div class="color dark-yellow" onclick="userClick(4)"></div>
+                <div class="color dark-orange" onclick="userClick(5)"></div>
+                <div class="color dark-purple" onclick="userClick(6)"></div>
+                <div class="color dark-pink" onclick="userClick(7)"></div>
+                <div class="color dark-cyan" onclick="userClick(8)"></div>
+            </div>
+            <div id="message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
