@@ -1,0 +1,156 @@
+/* Estilos generales */
+body {
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(135deg, #e2dbff, #bcb1ff);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00687a;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+#level {
+    font-size: 24px;
+    font-weight: bold;
+    animation: rainbow 5s infinite; /* Cambia de color cada 5 segundos */
+}
+
+@keyframes rainbow {
+    0% { color: rgb(255, 0, 0); }
+    14% { color: rgb(255, 127, 0); }
+    28% { color: rgb(255, 255, 0); }
+    42% { color: rgb(0, 255, 0); }
+    57% { color: rgb(0, 0, 255); }
+    71% { color: rgb(75, 0, 130); }
+    85% { color: rgb(148, 0, 211); }
+    100% { color: rgb(255, 0, 0); } /* Regresa al rojo */
+}
+
+#lives {
+    color: #ff0000;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#message {
+    color: #1E90FF;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#colors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 450px;
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
+
+/* Estilos para los botones de colores con sombra */
+.color {
+    width: 100%;
+    height: 100px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 1; /* Mantener la opacidad en 1 */
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra normal */
+}
+
+.color:hover {
+    opacity: 1; /* Mantener la opacidad 1 en hover */
+    transform: scale(1.05);
+    box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.6); /* Sombra más intensa al hacer hover */
+}
+
+.color.active { 
+    transform: scale(1.2); /* Agrandar ligeramente el color cuando está activo */
+    transition: transform 0.2s;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7); /* Resplandor al activarse */
+}
+
+/* Colores personalizados con degradados */
+.dark-red { background: linear-gradient(45deg, #8B0000, #FF4500); }
+.dark-green { background: linear-gradient(45deg, #006400, #32CD32); }
+.dark-blue { background: linear-gradient(45deg, #00008B, #1E90FF); }
+.dark-yellow { background: linear-gradient(45deg, #FFD700, #FFA500); }
+.dark-orange { background: linear-gradient(45deg, #FF8C00, #FF4500); }
+.dark-purple { background: linear-gradient(45deg, #4B0082, #8A2BE2); }
+.dark-pink { background: linear-gradient(45deg, #C71585, #FF1493); }
+.dark-cyan { background: linear-gradient(45deg, #008B8B, #20B2AA); }
+
+.hidden {
+    display: none;
+}
+
+.mode-btn {
+    font-family: 'Permanent Marker', cursive;
+    background: linear-gradient(135deg, #1E90FF, #00CED1);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 180px;
+}
+
+.mode-btn:hover {
+    background: linear-gradient(135deg, #00CED1, #1E90FF);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#restart-options {
+    margin-top: 20px;
+}
+
+#restart-options button {
+    font-family: 'Permanent Marker', cursive;    
+    background: linear-gradient(135deg, #FF6347, #FF4500);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#restart-options button:hover {
+    background: linear-gradient(135deg, #FF4500, #FF6347);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
